@@ -1,6 +1,9 @@
+#Paulo Schreiner, June 2019
+#The code is probably confusing. I lack patience to comment it all
+
 import webbrowser
 import time
-import random
+from random import choice
 import argparse
 from datetime import datetime
 import re
@@ -95,10 +98,10 @@ if args.open == True:
             print('Url removed from {} successfully!'.format(urlsFileName))
 
 '''
-if the webbrowser module not opening your default browser, replace webbrowser.open(content) with:
+if the webbrowser module is not opening your default browser, replace webbrowser.open(content) with:
 
 browser = 'chrome' #change accordingly
 pathToBrowser = "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" #change accordingly
 webbrowser.register(browser,None,webbrowser.BackgroundBrowser(pathToBrowser))
-webbrowser.get(browser).open(content)  
+webbrowser.get(browser).open(content) 
 '''
