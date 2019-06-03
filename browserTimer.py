@@ -68,7 +68,8 @@ else: #Append args.addurl to urlsFile.txt
 
             
 #Only sleep and open url if args.open == True
-if args.open == True:
+if args.open:
+    
     #If args.when exists, sleep for the amount os seconds until given time
     if args.when: 
         when_list = re.findall('\d+', args.when)
@@ -99,7 +100,7 @@ if args.open == True:
         print('Opening url.')
         time.sleep(0.3)
         webbrowser.open(content)
-    
+        
     except Exception as e:
         print('An error occured while opening the url.\nError message:',e)
     
